@@ -17,7 +17,7 @@ const sunriseEl = document.getElementById('sunrise');
 const sunsetEl = document.getElementById('sunset');
 const visibilityEl = document.getElementById('visibility');
 
-const API_KEY = 'c9ea5fc0601c035f3dd24ef32e0e07cd';
+const API_KEY = 'TA_CLE_ICI'; // Remplace par ta vraie clé (ou lis depuis .env avec un build tool)
 
 // 2. Fonction de recherche
 function chercherMeteo(ville) {
