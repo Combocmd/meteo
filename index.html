@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="top-bar">
+            <h1>Météo</h1>
+        </header>
+
+        <div class="search-card">
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Rechercher une ville...">
+                <button id="searchBtn" type="button">Rechercher</button>
+            </div>
+            <div id="errorMsg" class="error hidden"></div>
+        </div>
+
+        <div id="loading" class="loading hidden">Chargement…</div>
+
+        <section id="weatherCard" class="weather-card hidden">
+            <header class="weather-header">
+                <div class="location">
+                    <h2 id="cityName"></h2>
+                    <span id="countryCode" class="country"></span>
+                </div>
+                <img id="weatherIcon" src="" alt="" class="weather-icon">
+            </header>
+
+            <div class="current-weather">
+                <p id="temperature" class="temperature">--°</p>
+                <p id="description" class="description">--</p>
+            </div>
+
+            <ul class="details-grid">
+                <li class="detail-item">
+                    <span class="detail-icon" aria-hidden="true">💧</span>
+                    <div>
+                        <span class="detail-label">Humidité</span>
+                        <span id="humidity" class="detail-value">--%</span>
+                    </div>
+                </li>
+                <li class="detail-item">
+                    <span class="detail-icon" aria-hidden="true">💨</span>
+                    <div>
+                        <span class="detail-label">Vent</span>
+                        <span id="wind" class="detail-value">-- km/h</span>
+                    </div>
+                </li>
+                <li class="detail-item">
+                    <span class="detail-icon" aria-hidden="true">📊</span>
+                    <div>
+                        <span class="detail-label">Pression</span>
+                        <span id="pressure" class="detail-value">-- hPa</span>
+                    </div>
+                </li>
+                <li class="detail-item">
+                    <span class="detail-icon" aria-hidden="true">🌅</span>
+                    <div>
+                        <span class="detail-label">Lever</span>
+                        <span id="sunrise" class="detail-value">--:--</span>
+                    </div>
+                </li>
+                <li class="detail-item">
+                    <span class="detail-icon" aria-hidden="true">🌇</span>
+                    <div>
+                        <span class="detail-label">Coucher</span>
+                        <span id="sunset" class="detail-value">--:--</span>
+                    </div>
+                </li>
+                <li class="detail-item">
+                    <span class="detail-icon" aria-hidden="true">👁️</span>
+                    <div>
+                        <span class="detail-label">Visibilité</span>
+                        <span id="visibility" class="detail-value">-- km</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
